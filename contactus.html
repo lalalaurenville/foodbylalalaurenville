@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lalaurenville: Food</title>
+	<style>
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+       #map {
+        height: 400px;
+        width: 100%;
+       }
+body { 
+  font-family: 'Open Sans', sans-serif;
+  color: #666;
+  background-color: black;
+}
+
+/* STRUCTURE */
+#pagewrap {
+	padding: 5px;
+	width: 960px;
+	margin: 20px auto;
+}
+header {
+	height: 100px;
+	padding: 0 15px;
+}
+#content {
+	width: 290px;
+	float: left;
+	padding: 5px 15px;
+}
+#middle {
+	width: 294px; /* Account for margins + border values */
+	float: left;
+	padding: 5px 15px;
+	margin: 0px 5px 5px 5px;
+}
+
+#sidebar {
+	width: 270px;
+	padding: 5px 15px;
+	float: left;
+}
+footer {
+	clear: both;
+	padding: 0 15px;
+}
+
+/************************************************************************************
+MEDIA QUERIES
+*************************************************************************************/
+/* for 980px or less */
+@media screen and (max-width: 980px) {
+	#pagewrap {
+		width: 94%;
+	}
+	#content {
+		width: 41%;
+		padding: 1% 4%;
+	}
+	#middle {
+		width: 41%;
+		padding: 1% 4%;
+		margin: 0px 0px 5px 5px;
+		float: right;
+	}
+	#sidebar {
+		clear: both;
+		padding: 1% 4%;
+		width: auto;
+		float: none;
+	}
+	header, footer {
+		padding: 1% 4%;
+	}
+}
+/* for 700px or less */
+@media screen and (max-width: 600px) {
+	#content {
+		width: auto;
+		float: none;
+	}
+	#middle {
+		width: auto;
+		float: none;
+		margin-left: 0px;
+	}
+	#sidebar {
+		width: auto;
+		float: none;
+	}
+}
+
+/* for 480px or less */
+@media screen and (max-width: 480px) {
+
+	header {
+		height: auto;
+	}
+	h1 {
+		font-size: 2em;
+	}
+	#sidebar {
+		display: none;
+	}
+}
+#content {
+	background: #f8f8f8;
+}
+#sidebar {
+	background: #f0efef;
+}
+header, #content, #middle, #sidebar {
+	margin-bottom: 5px;
+}
+#pagewrap, header, #content, #middle, #sidebar, footer {
+	border: solid 1px #ccc;
+}
+
+/* my personal edits */
+#content, #middle, #sidebar {
+	background: black;
+	text-align: center;}
+#logo {max-height: 100%;
+		max-width: 100%;}
+header {background-color: white;}
+h2 {color: #CB77B2;}
+#google {height: 100%;
+		width: 100%;}
+p {color:white;}
+
+/*navigation bar*/
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 288px;
+    background-color: white;
+}
+li a.active {
+    background-color: #CB77B2;
+    color: white;
+}
+li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color on hover */
+li a:hover {
+    background-color: #555;
+    color: white;
+}
+	</style>
+</head>
+
+
+<body>
+	<div id="pagewrap">
+
+	<header>
+		<img id=logo src="logo.png"></img>
+	</header>
+		
+	<section id="content">
+		<h2>Explore</h2>
+		<ul>
+  <li><a href="home.html">Home</a></li>
+  <li><a href="product.html">Products</a></li>
+  <li><a href="schedule.html">Schedule</a></li>
+  <li><a href="order.html">Order Now</a></li>
+  <li><a class="active" href="contactus.html">Contact Us</a></li>
+  <li><a href="help.html">Help</a></li>
+</ul>
+<br>
+	</section>
+	
+	<section id="middle">
+		<h2>Information</h2>
+<p><strong>Address:</strong><br>
+	206 Washington St SW<br>
+	Atlanta, GA, 30334<br>
+	United States<br><br></ul>
+	<strong>Hours:</strong><br>
+	Monday-Friday: 9am-8pm<br>
+	Saturday: 12pm-8pm<br>
+	Sunday: 11am-6pm<br><br>
+	<strong>Store Phone:</strong><br>
+	404-000-9999 <br><br>
+	<strong>Email Address:</strong><br>
+	foodbyLalaurenville@gmail.com<br>
+
+
+  <div id="map"></div>
+    <script>
+      function initMap() {
+        var uluru = {lat: 33.7490, lng: -84.3880};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 15,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQia4Ss-VDuf0liWxO4v9dEgC7PSgpH0E&callback=initMap">
+    </script>
+
+	</section>
+
+	<aside id="sidebar">
+		<h2>Sponsors and News</h2>
+		<img id=google src="google.png"></img>
+	</aside>
+	
+	<footer>
+		<h4>Footer</h4>
+	</footer>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lalaurenville: Food</title>
+	<style>
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+body { 
+  font-family: 'Open Sans', sans-serif;
+  color: #666;
+  background-color: black;
+}
+
+/* STRUCTURE */
+#pagewrap {
+	padding: 5px;
+	width: 960px;
+	margin: 20px auto;
+}
+header {
+	height: 100px;
+	padding: 0 15px;
+}
+#content {
+	width: 290px;
+	float: left;
+	padding: 5px 15px;
+}
+#middle {
+	width: 294px; /* Account for margins + border values */
+	float: left;
+	padding: 5px 15px;
+	margin: 0px 5px 5px 5px;
+}
+
+#sidebar {
+	width: 270px;
+	padding: 5px 15px;
+	float: left;
+}
+footer {
+	clear: both;
+	padding: 0 15px;
+}
+
+/************************************************************************************
+MEDIA QUERIES
+*************************************************************************************/
+/* for 980px or less */
+@media screen and (max-width: 980px) {
+	#pagewrap {
+		width: 94%;
+	}
+	#content {
+		width: 41%;
+		padding: 1% 4%;
+	}
+	#middle {
+		width: 41%;
+		padding: 1% 4%;
+		margin: 0px 0px 5px 5px;
+		float: right;
+	}
+	#sidebar {
+		clear: both;
+		padding: 1% 4%;
+		width: auto;
+		float: none;
+	}
+	header, footer {
+		padding: 1% 4%;
+	}
+}
+/* for 700px or less */
+@media screen and (max-width: 600px) {
+	#content {
+		width: auto;
+		float: none;
+	}
+	#middle {
+		width: auto;
+		float: none;
+		margin-left: 0px;
+	}
+	#sidebar {
+		width: auto;
+		float: none;
+	}
+}
+
+/* for 480px or less */
+@media screen and (max-width: 480px) {
+
+	header {
+		height: auto;
+	}
+	h1 {
+		font-size: 2em;
+	}
+	#sidebar {
+		display: none;
+	}
+}
+#content {
+	background: #f8f8f8;
+}
+#sidebar {
+	background: #f0efef;
+}
+header, #content, #middle, #sidebar {
+	margin-bottom: 5px;
+}
+#pagewrap, header, #content, #middle, #sidebar, footer {
+	border: solid 1px #ccc;
+}
+
+/* my personal edits */
+#content, #middle, #sidebar {
+	background: black;
+	text-align: center;}
+#logo {max-height: 100%;
+		max-width: 100%;}
+header {background-color: white;}
+h2 {color: #CB77B2;}
+#google {height: 100%;
+		width: 100%;}
+p {color:white;}
+
+/*navigation bar*/
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 288px;
+    background-color: white;
+}
+li a.active {
+    background-color: #CB77B2;
+    color: white;
+}
+li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color on hover */
+li a:hover {
+    background-color: #555;
+    color: white;
+}
+	</style>
+</head>
+
+
+<body>
+	<div id="pagewrap">
+
+	<header>
+		<img id=logo src="logo.png"></img>
+	</header>
+		
+	<section id="content">
+		<h2>Explore</h2>
+		<ul>
+  <li><a href="home.html">Home</a></li>
+  <li><a href="product.html">Products</a></li>
+  <li><a href="schedule.html">Schedule</a></li>
+  <li><a class="active" href="order.html">Order Now</a></li>
+  <li><a href="contactus.html">Contact Us</a></li>
+  <li><a href="help.html">Help</a></li>
+</ul>
+<br>
+	</section>
+	
+<section id="middle">
+		<h2>Order Below</h2>
+		<form action="#" method="POST">
+			Name: 
+			<input type="text" name="name"><br>
+			Email:
+			<input type="email" name="email"><br>
+			Phone #:
+			<input type="number" name="number"><br>
+			Address:
+			<input type="text" name="address"><br>
+			City:
+			<input type="text" name="city"><br>
+			State:
+			<select>
+	<option value="AL">Alabama (AL)</option>
+	<option value="AK">Alaska (AK)</option>
+	<option value="AZ">Arizona (AZ)</option>
+	<option value="AR">Arkansas (AR)</option>
+	<option value="CA">California (CA)</option>
+	<option value="CO">Colorado (CO)</option>
+	<option value="CT">Connecticut (CT)</option>
+	<option value="DE">Delaware (DE)</option>
+	<option value="DC">District Of Columbia (DC)</option>
+	<option value="FL">Florida (FL)</option>
+	<option value="GA">Georgia (GA)</option>
+	<option value="HI">Hawaii (HI)</option>
+	<option value="ID">Idaho (ID)</option>
+	<option value="IL">Illinois (IL)</option>
+	<option value="IN">Indiana (IN)</option>
+	<option value="IA">Iowa (IA)</option>
+	<option value="KS">Kansas (KS)</option>
+	<option value="KY">Kentucky (KY)</option>
+	<option value="LA">Louisiana (LA)</option>
+	<option value="ME">Maine (ME)</option>
+	<option value="MD">Maryland (MD)</option>
+	<option value="MA">Massachusetts (MA)</option>
+	<option value="MI">Michigan (MI)</option>
+	<option value="MN">Minnesota (MN)</option>
+	<option value="MS">Mississippi (MS)</option>
+	<option value="MO">Missouri (MO)</option>
+	<option value="MT">Montana (MT)</option>
+	<option value="NE">Nebraska (NE)</option>
+	<option value="NV">Nevada (NV)</option>
+	<option value="NH">New Hampshire (NH)</option>
+	<option value="NJ">New Jersey (NJ)</option>
+	<option value="NM">New Mexico (NM)</option>
+	<option value="NY">New York (NY)</option>
+	<option value="NC">North Carolina (NC)</option>
+	<option value="ND">North Dakota (ND)</option>
+	<option value="OH">Ohio (OH)</option>
+	<option value="OK">Oklahoma (OK)</option>
+	<option value="OR">Oregon (OR)</option>
+	<option value="PA">Pennsylvania (PA)</option>
+	<option value="RI">Rhode Island (RI)</option>
+	<option value="SC">South Carolina (SC)</option>
+	<option value="SD">South Dakota (SD)</option>
+	<option value="TN">Tennessee (TN)</option>
+	<option value="TX">Texas (TX)</option>
+	<option value="UT">Utah (UT)</option>
+	<option value="VT">Vermont</option>
+	<option value="VA">Virginia</option>
+	<option value="WA">Washington</option>
+	<option value="WV">West Virginia</option>
+	<option value="WI">Wisconsin</option>
+	<option value="WY">Wyoming</option>
+</select>				<br>
+			Zip Code:
+			<input type="number" name="zipcode" max="99999"><br><br>
+			
+			Meals<br>
+			<select name="meals" size="4" multiple>
+				<option value="1">Fried Catfish</option>
+				<option value="2">Fried Chicken</option>
+				<option value="3">Veggie Plate</option>
+				<option value="4">Carrots</option>
+			</select><br><br>
+			Sides<br>
+			<input type="checkbox">Mac and Cheese 
+			<input type="checkbox">Collard Greens
+			<input type="checkbox">Black Eyed Peas
+			<input type="checkbox">Mashed Potatoes
+			<input type="checkbox">Mixed Fruit
+			<input type="checkbox">Green Beans
+			<input type="checkbox">Yams
+			<input type="checkbox">Brocolli
+			<input type="checkbox">Corn
+			<input type="checkbox">Carrots
+			<br><br>
+			Pick Up or Delivery Date/Time:
+			<input type="datetime-local" name="datetime"><br><br>
+			<input type="radio" name="how" value="1">Pick Up
+			<input type="radio" name="how" value="2"> Delivery
+			<br>
+			<input type="submit">
+			<input type="reset">
+		</form>
+</section>
+
+	<aside id="sidebar">
+		<h2>Sponsors and News</h2>
+		<img id=google src="google.png"></img>
+	</aside>
+	
+	<footer>
+		<h4>Footer</h4>
+	</footer>
+
+</div>
+</body>
+</html>
