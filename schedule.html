@@ -150,6 +150,30 @@ li a:hover {
     background-color: #555;
     color: white;
 }
+
+/* Table */
+table {
+    width:100%;
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+    text-align: left;
+}
+table#t01 tr:nth-child(even) {
+    background-color: white;
+}
+table#t01 tr:nth-child(odd) {
+   background-color: white;
+}
+table#t01 th {
+    background-color: #555;
+    color: #CB77B2;
+}
+
 	</style>
 </head>
 
@@ -176,11 +200,46 @@ li a:hover {
 	
 	<section id="middle">
 		<h2>Information</h2>
+		<table id="t01">
+  <tr>
+  	<caption>The following items are 50% off on their corresponding day of the week.</caption>
+    <th>Day</th>
+    <th>Food of the Day</th> 
+  </tr>
+  <tr>
+    <td>Sunday</td>
+    <td>Chicken and Dumplings</td>
+  </tr>
+  <tr>
+    <td>Monday</td>
+    <td>Chitterlings</td>
+    </tr>
+  <tr>
+    <td>Tuesday</td>
+    <td>Chicken Fried Steak</td>
+  </tr>
+  <tr>
+    <td>Wednesday</td>
+    <td>Shrimp and Grits</td>
+  </tr>
+  <tr>
+    <td>Thursday</td>
+    <td>Fried Fish</td>
+    </tr>
+  <tr>
+    <td>Friday</td>
+    <td>Pot Roast</td>
+  </tr>
+  <tr>
+  	<td>Saturday</td>
+    <td>Chicken and Rice</td>
+  </tr>
+</table>
 	</section>
 
 	<aside id="sidebar">
-		<h2>Sponsors and News</h2>
-		<img id=google src="google.png"></img>
+		<h2>News</h2>
+			<a class="twitter-timeline" data-lang="en" data-height="300" data-theme="light" data-link-color="#CB77B2" href="https://twitter.com/EatSoulFood?ref_src=twsrc%5Etfw">Tweets by EatSoulFood</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 	</aside>
 	
 	<footer>
